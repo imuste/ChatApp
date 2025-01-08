@@ -1,0 +1,10 @@
+SendMessage: Sending message of type = 1 to Dst = Server
+MSG-RCVD: type = 2; src = Server; dst = clientZ2; length = 0 ; id = 0
+MSG-RCVD: type = 4; src = Server; dst = clientZ2; length = 9 ; id = 0
+Printing out the message payload 
+clientZ2 
+Enter 1 to exit; Enter 2 to read; Enter 3 to send message to another user
+Waiting for incoming CHAT message:
+MSG-RCVD: type = 5; src = client34; dst = clientZ2; length = 58 ; id = 1
+Printing out the message payload 
+Hello, how are you doing, this is a message from client34.

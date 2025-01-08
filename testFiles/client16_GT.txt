@@ -1,0 +1,20 @@
+
+HELLO ACK
+Message Header:
+  msgType: 2
+  msgSource: Server
+  msgDest: Client15
+  contentLength: 0
+  msgID: 0
+
+
+CLIENT LIST
+Message Header:
+  msgType: 4
+  msgSource: Server
+  msgDest: Client15
+  contentLength: 18
+  msgID: 0
+
+client15
+Client15

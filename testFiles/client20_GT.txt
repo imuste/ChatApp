@@ -1,0 +1,39 @@
+
+HELLO ACK
+Message Header:
+  msgType: 2
+  msgSource: Server
+  msgDest: client20
+  contentLength: 0
+  msgID: 0
+
+
+CLIENT LIST
+Message Header:
+  msgType: 4
+  msgSource: Server
+  msgDest: client20
+  contentLength: 9
+  msgID: 0
+
+client20
+
+CHAT
+Message Header:
+  msgType: 5
+  msgSource: client19
+  msgDest: client20
+  contentLength: 32
+  msgID: 1
+
+Hello this is message 1 for you!
+
+CHAT
+Message Header:
+  msgType: 5
+  msgSource: client19
+  msgDest: client20
+  contentLength: 13
+  msgID: 1
+
+And message 2

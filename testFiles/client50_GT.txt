@@ -1,0 +1,40 @@
+
+HELLO ACK
+Message Header:
+  msgType: 2
+  msgSource: Server
+  msgDest: client50
+  contentLength: 0
+  msgID: 0
+
+
+CLIENT LIST
+Message Header:
+  msgType: 4
+  msgSource: Server
+  msgDest: client50
+  contentLength: 9
+  msgID: 0
+
+client50
+
+CHAT
+Message Header:
+  msgType: 5
+  msgSource: client51
+  msgDest: client50
+  contentLength: 1
+  msgID: 1
+
+I
+
+CHAT
+Message Header:
+  msgType: 5
+  msgSource: client51
+  msgDest: client50
+  contentLength: 36
+  msgID: 2
+
+I'm happy to hear you're doing well.
+client was successfully removed

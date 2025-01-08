@@ -1,0 +1,21 @@
+
+HELLO ACK
+Message Header:
+  msgType: 2
+  msgSource: Server
+  msgDest: client43
+  contentLength: 0
+  msgID: 0
+
+
+CLIENT LIST
+Message Header:
+  msgType: 4
+  msgSource: Server
+  msgDest: client43
+  contentLength: 18
+  msgID: 0
+
+client38
+client43
+client was successfully removed

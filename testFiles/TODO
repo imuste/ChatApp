@@ -1,0 +1,681 @@
+client1.c:
+ - Writes HELLO
+ - Reads HELLO ACK
+ - Reads CLIENT_LIST
+ - Writes EXIT
+--> regular / no edge case
+
+client2.c:
+ - Writes HELLO
+ - Reads HELLO ACK
+ - Writes HELLO
+ - Reads 0, indicating connection was closed
+--> writes HELLO twice, client already present
+--> 4 - client sends 2nd HELLO with its own ID | DISCONNECTION
+
+client3.c:
+ - Writes HELLO
+ - Reads HELLO ACK
+ - Reads CLIENT_LIST
+ - Writes CLIENT_LIST
+ - Reads CLIENT_LIST
+ - Writes EXIT
+--> regular / no edge case
+
+client4.c:
+ - Writes HELLO and EXIT at the same time
+ - Reads HELLO ACK
+ - Reads CLIENT_LIST
+--> writes two messages at once
+
+client5.c:
+ - Writes HELLO
+ - Reads HELLO ACK
+ - Reads CLIENT_LIST
+ - Reads CHAT1 from client6
+ - Writes CHAT2 to client6
+ - Reads CHAT3 from client6
+ - Writes CHAT4 to client6
+ - Writes EXIT
+--> regular / no edge case
+
+client6.c:
+ - Writes HELLO
+ - Reads HELLO ACK
+ - Reads CLIENT_LIST
+ - Writes CHAT1 to client5
+ - Reads CHAT2 from client5
+ - Writes CHAT3 to client5
+ - Reads CHAT4 from client 5
+ - Writes EXIT
+--> regular / no edge case
+
+client7.c:
+ - Writes HELLO
+ - Reads HELLO ACK
+ - Reads CLIENT_LIST
+ - Writes 20 bytes of CLIENT_LIST_REQ
+ - Writes 30 bytes of CLIENT_LIST_REQ
+ - Writes EXIT
+--> writes partial CLIENT_LIST_REQ headers
+
+client8.c:
+ - Writes 3 bytes of HELLO
+ - Writes 47 bytes of HELLO
+ - Reads HELLO ACK
+ - Reads CLIENT_LIST
+ - Writes 49 bytes of EXIT
+ - Writes 1 byte of EXIT
+--> writes partial HELLO and EXIT headers
+
+client9.c:
+ - Writes HELLO
+ - Reads HELLO ACK
+ - Reads CLIENT_LIST
+ - Reads CHAT1 from client10
+ - Writes 17 bytes of CHAT2 to client10
+ - Writes 34 bytes of CHAT2 to client10
+ - Writes 18 bytes of CHAT2 to client10
+ - Reads CHAT3 from client10
+ - Writes 3 bytes of CHAT4 to client10
+ - Writes 40 bytes of CHAT4 to client10
+ - Writes 15 bytes of CHAT4 to client10
+ - Writes EXIT
+--> writes partial CHAT headers to client 10
+--> clients read and write in order to each other
+
+client10.c:
+ - Writes HELLO
+ - Reads HELLO ACK
+ - Reads CLIENT_LIST
+ - Writes 49 bytes of CHAT1 to client9
+ - Writes 58 bytes of CHAT1 to client9
+ - Writes 1 bytes of CHAT1 to client9
+ - Reads CHAT2 from client9
+ - Writes 37 bytes of CHAT3 to client9
+ - Writes 37 bytes of CHAT3 to client9
+ - Writes 12 bytes of CHAT3 to client9
+ - Reads CHAT4 from client9
+ - Writes EXIT
+--> writes partial CHAT headers to client 9
+--> clients read and write in order to each other
+
+client11.c:
+ - Writes CLIENT_LIST
+ - Reads 0, indicating connection closed
+--> client enters with different message than HELLO
+
+client12.c:
+ - Writes HELLO
+ - Reads HELLO ACK
+ - Reads CLIENT_LIST
+--> client leaves without EXIT
+
+client13.c:
+ - Writes HELLO
+ - Reads HELLO ACK
+ - Writes CLIENT_LIST_REQ Part 1
+ - Reads CHAT from client14
+ - Writes CLIENT_LIST_REQ Part 2
+ - Reads CLIENT_LIST
+ - Writes EXIT
+--> client gets chat in middle of sending server request
+
+client14.c:
+ - Writes HELLO
+ - Reads HELLO ACK
+ - Writes CHAT to client13
+ - Writes EXIT
+--> sends chat to client13 while client13 is in middle of sending server request
+
+client15.c:
+ - Writes HELLO
+ - Reads HELLO ACK
+ - Reads CLIENT_LIST
+ - Writes EXIT
+--> regular / no edge case
+
+client16.c:
+ - Writes HELLO as Client15
+ - Reads HELLO ACK
+ - Reads CLIENT_LIST
+ - Writes EXIT as Client15
+--> together with client15.c makes sure that client15 is different from Client15
+
+client17.c:
+ - Writes 3 bytes of HELLO
+ - Sleep 5 seconds
+ - Writes 47 bytes of HELLO
+ - Reads HELLO ACK
+ - Reads CLIENT_LIST
+ - Writes EXIT
+--> sleeps before finishing HELLO to ensure that client18 doesn't have client17
+    in its CLIENT_LIST
+
+client18.c:
+ - Writes HELLO
+ - Reads HELLO ACK
+ - Reads CLIENT_LIST
+ - Writes EXIT
+--> should not have client17 in its CLIENT_LIST
+
+client19.c:
+ - Writes HELLO, CLIENT_LIST_REQ, CHAT1, CHAT2
+ - Reads HELLO ACK
+ - Reads CLIENT_LIST
+ - Writes EXIT
+--> writes multiple messages at the same time
+
+client20.c:
+ - Writes HELLO
+ - Reads HELLO ACK
+ - Reads CLIENT_LIST
+ - Reads CHAT1
+ - Reads CHAT2
+ - Writes EXIT
+--> reads the CHATs from client19
+
+client21.c:
+ - Writes HELLO
+ - Reads HELLO ACK
+ - Reads CLIENT_LIST
+ - Writes CHAT1 to client22
+ - Writes CHAT2 to client23
+ - Writes CHAT3 to client24
+ - Reads CHAT from client22
+ - Reads CHAT from client24
+ - Reads CHAT from client23
+ - Writes EXIT
+--> interacts with client22, client23, client24
+
+client22.c:
+ - Writes HELLO
+ - Reads HELLO ACK
+ - Reads CLIENT_LIST
+ - Reads CHAT from client21
+ - Writes CHAT1 to client21
+ - Writes CHAT2 to client24
+ - Reads CHAT from client24
+ - Writes EXIT
+--> interacts with client21, client23, client24
+
+client23.c:
+ - Writes HELLO
+ - Reads HELLO ACK
+ - Reads CLIENT_LIST
+ - Reads CHAT from client21
+ - Writes CHAT1 to client24
+ - Reads CHAT from client24
+ - Writes CHAT2 to client21
+ - Writes EXIT
+--> interacts with client21, client22, client24
+
+client24.c:
+ - Writes HELLO
+ - Reads HELLO ACK
+ - Reads CLIENT_LIST
+ - Reads CHAT from client21
+ - Reads CHAT from client22
+ - Writes CHAT1 to client22
+ - Writes CHAT2 to client21
+ - Reads CHAT from client23
+ - Writes CHAT3 to client23
+ - Writes EXIT
+--> interacts with client21, client21, client23
+
+client25.c:
+ - Writes HELLO
+ - Reads HELLO ACK
+ - Reads CLIENT_LIST
+ - Writes CHAT1 to client26 of 400 bytes
+ - Reads CHAT from client26
+ - Writes EXIT
+--> writes maximum number of bytes message to client26
+
+client26.c:
+ - Writes HELLO
+ - Reads HELLO ACK
+ - Reads CLIENT_LIST
+ - Reads CHAT from client25 of 400 bytes
+ - Writes CHAT1 to client25
+ - Writes EXIT
+--> reads maximum number of bytes message from client25
+
+client27.c:
+ - Writes HELLO
+ - Reads HELLO ACK
+ - Reads CLIENT_LIST
+ - Writes CHAT1 to clientX (doesn't exist)
+ - Reads ERROR_CANNOT_DELIVER
+ - Reads 0 to make sure connection was closed
+--> writes CHAT to non-existent client
+
+client28.c:
+ - Writes HELLO
+ - Reads HELLO ACK
+ - Reads CLIENT_LIST
+ - Writes 20 bytes of CLIENT_LIST_REQ
+ - Sleeps 60 seconds
+ - Reads which should return 0
+--> writes 20 bytes and sleeps, so server should disconnect
+
+client29.c:
+ - Writes 3 bytes of HELLO
+ - Writes 47 bytes of HELLO
+ - Reads HELLO ACK
+ - Reads CLIENT_LIST
+ - Reads CHAT from client30
+ - Writes CHAT1 to client30
+ - Writes EXIT
+--> takes time to send full hello message, and gets CHAT after
+
+client30.c:
+ - Writes HELLO
+ - Reads HELLO ACK
+ - Reads CLIENT_LIST
+ - Writes CHAT1 to client29
+ - Reads CHAT from client29
+ - Writes EXIT
+--> writes CHAT to client29 after it has finished connecting
+
+client31.c:
+ - Writes HELLO
+ - Reads HELLO ACK
+ - Reads CLIENT_LIST
+ - Writes EXIT
+--> client32 will try to write to this client after it EXIT
+
+client32.c:
+ - Writes HELLO
+ - Reads HELLO ACK
+ - Reads CLIENT_LIST
+ - Writes CHAT1 to client31 
+ - Reads ERROR_CANNOT_DELIVER
+ - Reads 0, indicating connection was closed
+--> tries to write to client31 after this client has disconnected
+
+client33.c:
+ - Writes HELLO
+ - Reads HELLO ACK
+ - Reads CLIENT_LIST
+ - Reads CHAT from clientZ1
+ - Writes EXIT
+--> to be used in combination with provided client "assign-2client" to test reading
+
+client34.c:
+ - Writes HELLO
+ - Reads HELLO ACK
+ - Reads CLIENT_LIST
+ - Writes CHAT1 to clientZ2
+ - Writes EXIT
+--> to be used in combination with provided client "assign-2client" to test writing
+
+client35.c:
+ - Writes HELLO
+ - Reads HELLO ACK
+ - Reads CLIENT_LIST
+ - Writes 49 bytes of CHAT1 to client36
+ - Sleeps 59 seconds
+ - Writes 58 bytes of CHAT1 to client36
+ - Sleeps 20 seconds
+ - Writes 1 bytes of CHAT1 to client36
+ - Reads ERROR_CANNOT_DELIVER
+ - Reads 0 to make sure connection was closed
+--> writes partial CHAT headers to client36 which times out in that time
+
+client36.c:
+ - Writes HELLO
+ - Reads HELLO ACK
+ - Reads CLIENT_LIST
+ - Writes 20 bytes of CLIENT_LIST_REQ
+ - Sleeps 15 seconds
+ - Writes 30 bytes of CLIENT_LIST_REQ
+ - Reads CLIENT_LIST
+ - Writes 20 bytes of CLIENT_LIST_REQ
+ - Sleeps 60 seconds and times out
+ - Reads 0, indicating connection closed
+--> writes partial CLIENT_LIST_REQ twice, and times out the second time
+
+client37.c:
+ - Writes 3 bytes of HELLO
+ - Sleep 60.15 seconds
+ - Reads 0, indicating connection closed
+--> takes time to send full hello message, so gets timed out
+
+client38.c:
+ - Writes HELLO
+ - Reads HELLO ACK
+ - Reads CLIENT_LIST
+ - Sleeps 35 seconds
+ - Writes EXIT
+--> allows for clientID error testing
+
+client39.c:
+ - Writes HELLO
+ - Reads HELLO ACK
+ - Reads CLIENT_LIST
+ - Writes CLIENT_LIST_REQ with wrong existing clientID
+ - Reads 0, indicating connection closed
+--> 6 - client sends 2nd msg with another client's ID | DISCONNECTION
+
+client40.c:
+ - Writes HELLO
+ - Reads HELLO ACK
+ - Reads CLIENT_LIST
+ - Writes CHAT to itself
+ - Reads 0, indicating connection closed
+--> checks that connection is closed when CHAT is written to clients own ID
+
+client41.c:
+ - Writes HELLO with client38 ID
+ - Reads ERROR_ALREADY_EXISTS
+ - Reads 0, indicating connection closed
+--> 1 - client sends HELLO with another client's ID | ERROR_CLIENT_ALREADY_EXISTS
+
+client42.c:
+ - Writes HELLO with client42 ID
+ - Reads HELLO ACK
+ - Reads CLIENT_LIST
+ - Writes HELLO with client38 ID
+ - Reads 0, indicating connection closed
+--> 3 - client sends 2nd HELLO with another client's ID | DISCONNECTION
+
+client43.c:
+ - Writes HELLO with client43 ID
+ - Reads HELLO ACK
+ - Reads CLIENT_LIST
+ - Writes HELLO with client44 ID
+ - Reads 0, indicating connection closed
+--> 5 - client sends 2nd HELLO with a new ID | DISCONNECTION
+
+client44.c:
+ - Writes HELLO with client44 ID
+ - Reads HELLO ACK
+ - Reads CLIENT_LIST
+ - Writes HELLO with client45 ID
+ - Reads 0, indicating connection closed
+--> 8 - client sends 2nd msg with a new ID | DISCONNECTION
+
+client45.c:
+ - Writes HELLO, CLIENT_LIST_REQ, CHAT1, invalid CHAT2, CHAT3
+ - Reads HELLO ACK
+ - Reads CLIENT_LIST
+ - Reads CLIENT_LIST
+ - Reads ERROR_CANNOT_DELIVER
+ - Reads 0 to ensure closed connection
+--> writes multiple messages at the same time and second to last one is invalid
+
+client46.c:
+ - Writes HELLO
+ - Reads HELLO ACK
+ - Reads CLIENT_LIST
+ - Reads CHAT1
+ - Writes EXIT
+--> reads the valid CHAT from client45
+
+client47.c:
+ - Writes HELLO, CLIENT_LIST_REQ wrong, CLIENT_LIST_REQ right
+ - Reads HELLO ACK
+ - Reads CLIENT_LIST
+ - Reads 0, indicating connection closed
+--> writes multiple messages at the same time and second is invalid, no third
+
+client48.c:
+ - Writes HELLO
+ - Reads HELLO ACK
+ - Reads CLIENT_LIST
+ - Writes CHAT1 to client38 of length 0, with real length 30
+ - Reads 0, indicating connection closed from timeout
+--> sets content length to shorter than real length
+
+client49.c:
+ - Writes HELLO
+ - Reads HELLO ACK
+ - Reads CLIENT_LIST
+ - Writes CHAT1 to client38 of length 1, with real length 55
+ - Reads 0, indicating connection closed from wrong header
+--> sets content length to shorter than real length
+
+client50.c:
+ - Writes HELLO
+ - Reads HELLO ACK
+ - Reads CLIENT_LIST
+ - Reads CHAT1 from client51
+ - Writes CHAT2 to client51
+ - Reads CHAT3 from client51
+ - Writes CHAT4 to client51 of 0 bytes
+ - Reads 0, indicating connection closed from CHAT header
+--> writes an empty chat and reads an empty chat
+
+client51.c:
+ - Writes HELLO
+ - Reads HELLO ACK
+ - Reads CLIENT_LIST
+ - Writes CHAT1 to client50 of 1 byte
+ - Reads CHAT2 from client50
+ - Writes CHAT3 to client50
+ - Writes EXIT
+--> writes a 1 byte chat and doesn't receive the empty chat
+
+client52.c, client53.c, client54.c, client55.c, client56.c, client57.c:
+ - Writes HELLO wrong
+ - Reads 0, indicating connection closed from wrong header
+--> 52 - HELLO message doesn't say "Server" as destID
+--> 53 - HELLO message doesn't have contentLength as 0
+--> 54 - HELLO message doesn't have msgID as 0
+--> 55 - HELLO srcID is not \0 terminated
+--> 56 - HELLO destID is not \0 terminated
+--> 57 - HELLO message destID is empty
+
+client58.c, client59.c:
+ - Writes HELLO
+ - Reads HELLO ACK
+ - Reads CLIENT_LIST
+ - Writes CLIENT_LIST_REQ wrong
+ - Reads 0, indicating connection closed from wrong header
+--> 58 - CLIENT_LIST_REQ message doesn't say "Server" as destID
+--> 59 - CLIENT_LIST_REQ srcID is not \0 terminated
+
+client60.c, client61.c:
+ - Writes HELLO
+ - Reads HELLO ACK
+ - Reads CLIENT_LIST
+ - Writes HELLO 2 wrong
+ - Reads 0, indicating connection closed from wrong header
+--> 60 - 2nd HELLO message doesn't have contentLength as 0
+--> 61 - 2nd HELLO message srcID is empty
+
+client62.c, client63.c:
+ - Writes HELLO
+ - Reads HELLO ACK
+ - Reads CLIENT_LIST
+ - Writes EXIT wrong
+ - Reads 0, indicating connection closed from wrong header
+--> 62 - EXIT message doesn't have msgID as 0
+--> 63 - EXIT destID is not \0 terminated
+
+client64.c, client65.c, client66.c:
+ - Writes HELLO
+ - Reads HELLO ACK
+ - Reads CLIENT_LIST
+ - Writes CHAT wrong
+ - Reads 0, indicating connection closed from wrong header
+--> 64 - CHAT content length > 400
+--> 65 - CHAT msgID = 0
+--> 66 - CHAT message destination ID == "Server"
+
+client67.c, client68.c:
+ - Writes HELLO wrong
+ - Reads 0, indicating connection closed from wrong header
+--> 67 - HELLO msgSource = "Server"
+--> 68 - HELLO msgSource = " "
+
+client69.c:
+ - Writes HEllO
+ - Reads HELLO ACK
+ - Reads CLIENT_LIST
+ - Sleep 5
+ - Writes EXIT
+--> allows clients 70, 72 to test chatting with dissapearing client and 
+    where clients arrive at different times, so reorganization of clientList 
+    order
+
+client70.c:
+ - Writes HELLO
+ - Reads HELLO ACK
+ - Reads CLIENT_LIST
+ - Reads CHAT1 from client72
+ - Sleep 3
+ - Writes CHAT2 to client72
+ - Reads CHAT3 from client72
+ - Writes CHAT4 to client72
+ - Writes EXIT
+--> tests CHAT with client in between CHAT client
+
+client71.c:
+ - Writes HEllO
+ - Reads HELLO ACK
+ - Reads CLIENT_LIST
+ - Sleep 3
+ - Writes EXIT
+--> allows clients 70, 72 to test chatting with dissapearing client
+
+client72.c:
+ - Writes HELLO
+ - Reads HELLO ACK
+ - Reads CLIENT_LIST
+ - Writes CHAT1 to client70
+ - Reads CHAT2 from client70
+ - Writes CHAT3 to client70
+ - Sleep 3
+ - Reads CHAT4 from client 70
+ - Writes EXIT
+--> tests CHAT with client in between CHAT client
+
+client73.c:
+ - 45 clients write HELLO
+ - 45th client gets disconnected because it puts the clientList over 400 bytes
+ - 44 clients write EXIT
+--> tests that the maximum number of clients gets detected
+
+client74.c:
+ - Writes 3 bytes of HELLO
+ - Writes 47 bytes of HELLO + 49 bytes of EXIT
+ - Reads HELLO ACK
+ - Reads CLIENT_LIST
+ - Writes 1 byte of EXIT
+--> writes partial HELLO and EXIT headers with combination in one write
+
+client75.c:
+ - Writes 3 bytes of HELLO
+ - Writes 47 bytes of HELLO + bytes of CHAT
+ - Reads HELLO ACK
+ - Reads CLIENT_LIST
+ - Writes other bytes of CHAT
+ - Reads CHAT
+ - EXIT
+--> writes HELLO and partial CHAT in one write
+
+client76.c:
+ - Writes HELLO
+ - Reads HELLO ACK
+ - Reads CLIENT_LIST
+ - Writes CHAT1 to client75
+ - Reads CHAT2 from client75
+ - Writes CHAT3 to client75
+ - Reads CHAT4 from client 75
+ - Writes EXIT
+--> tests CHAT with pause from client75
+
+client77.c:
+ - Writes HELLO
+ - Reads HELLO ACK
+ - Reads CLIENT_LIST
+ - Writes CHAT wrong 
+ - Reads 0, indicating connection closed from wrong header
+--> tests CHAT with empty destID
+
+client78.c:
+ - Writes HELLO and part of CHAT message
+ - Reads HELLO ACK
+ - Reads CLIENT_LIST
+ - sleeps 60 seconds, so timesout
+ - Reads 0, indicating connection closed from wrong header
+--> tests that after part of CHAT and sleep, gets disconnected
+
+
+
+GENERAL TESTING:
+V) client writes two messages at once
+V) write HELLO message split up with sleep in between
+V) write CLIENT LIST message split up with sleep in between
+V) write EXIT message split up with sleep in between
+V) write CHAT message header split up with sleep in between
+V) write CHAT message body split up with sleep in between
+V) client enters with different message than HELLO
+V) network / host byte order is not the same at server and client sides
+V) client leaves without EXIT
+V) client 1 sends partial message to server, client 2 sends CHAT to client 1, 
+    client 1 reads CHAT, client 1 finishes partial message to server
+V) one client has ID "client15" and other client has ID "Client15", so should
+    be treated as different clients
+V) client1 sends partial HELLO, client 2 sends HELLO and shouldn't get 
+    client1 in its CLIENT_LIST
+V) client writes HELLO, CLIENT_LIST_REQ, and 2 x CHAT at once to the server
+V) many different clients connect to the server and send messages back and forth
+V) really long message from one client to another
+V) client sends message to non-existent client, so gets error 
+V) client 1 sends partial HELLO to server, client 2 sends CHAT to client 1, 
+    server should not allow because HELLO message is not complete
+V) client 1 connects and immediately leaves, then client2 tries to send a CHAT
+    to client1 and gets error
+V) client doesn't complete partial message in < 1 min
+V) client 1 and 2 both sleep between partial messages, and client1 eventually
+    finishes CHAT to client2 which has then timed out and has been removed
+V) client sends partial HELLO message and gets timed out before it finishes
+V) client 2nd message has different client ID, so gets removed
+V) CHAT message destination ID is client's own ID
+V) client connects, but the clientID already exists
+V) 2 valid messages, 1 invalid message, and another valid message all sent in 
+    one write and read in one read - should process first 2 valid message 
+    properly and then send CANNOT_DELIVER and do valid message
+V) client sends a valid message, invalid message, and valid message. The 
+    invalid message causes disconnection, so server shouldn't keep reading
+V) content length 0, but next data is 30 bytes and not header of next message
+V) content length 0, but next data is 55 bytes and not header of next message
+V) write chat with contentLength 0
+V) clientID == "Server", should disconnect
+V) middle client dissapeaers and left and right client keep talking
+V) client tries to connect, but the client list is exceeding 400 bytes with
+    that client, so refuse the client
+V) client sends wrong message type
+V) correct client list order for delayed HELLO message
+
+
+
+ID ERROR HANDLING
+1) client sends HELLO with another client's ID      | ERROR_CLIENT_ALREADY_EXISTS
+2) client sends HELLO with a new ID                 | CORRECT
+
+3) client sends 2nd HELLO with another client's ID  | DISCONNECTION
+4) client sends 2nd HELLO with its own ID           | DISCONNECTION
+5) client sends 2nd HELLO with a new ID             | DISCONNECTION
+
+6) client sends 2nd msg with another client's ID    | DISCONNECTION
+7) client sends 2nd msg with its own ID             | CORRECT
+8) client sends 2nd msg with a new ID               | DISCONNECTION
+
+
+
+#FIRST
+tar -cvf a2_part1.tar.gz serverDriver.c server.c server.h README
+provide comp112 a2_part1 a2_part1.tar.gz
+
+#FINAL
+tar -cvf a2.tar.gz serverDriver.c server.c server.h README
+provide comp112 a2 a2.tar.gz
+
+
+tar –xvzf [archive name]
+
+

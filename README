@@ -1,0 +1,64 @@
+/*****************************************************************************
+* ChatApp
+* Author: Isabel Muste
+* Project Language: C
+*****************************************************************************/
+
+The purpose of this program is to provide the user with a chat application
+that allows multiple clients to communicate simultaneously with each other.
+This program acts as a server allowing the clients to connect by sending
+a HELLO message registering them in the database of available clients. When
+a client tries to send a message to another client, the database is checked
+to ensure that client is active and the message will then be forwarded.
+
+The communication between clients and the server is based on TCP and there are
+4 available messages that can be sent by the client:
+- HELLO: used by new clients to be added to the client list. This will result
+int a HELLO ACK from the server
+- LIST_REQUEST: used by existing clients to receive a list of other available
+clients
+- CHAT: used by existing clients to send a chat message to another existing
+client. The data part of this message will be sent to the recipient
+- EXIT: used by existing clients to terminate the connection with the server
+and be removed from the client list
+
+This program has extensive error handling to ensure that clients cannot send
+illegitimate messages, chat with other clients before being registered, clients
+arbitrarily closing the socket, etc.
+The server will also be able to process partial messages as TCP might not
+deliver the entire message at once. These partial messages will be stored and
+processed once the full message is received.
+
+This project taught me to write a server program that is capable of handling
+many clients and their data as well as concurrently helping multiple clients
+to ensure efficiency for each client. It also helped me gain a deeper
+understanding of network and host byte ordering and how to handle this in 
+a program.
+
+
+/*****************************************************************************
+ RUNNING THE PROGRAM
+*****************************************************************************/
+- Compile using 
+    gcc -g serverDriver.c server.c -o server
+- Run with
+    ./server [userPort]
+
+Once the program is running, the user can use the client programs in the
+testFiles directory to send messages to other clients. The client programs
+can be compiled using the 'make.sh' shell script and can then either be 
+ran one at a time by the user, or with a second shell script. This shell
+script is called 'programTesting.sh' and when run, all 80 tests are run and
+show success message. In these programs multiple error cases are tested as 
+well as success cases where clients send messages back and forth.
+
+An example of running a client program with two clients chatting back and 
+forth is:
+- chmod +x make.sh
+- ./make.sh
+- ./client5 > client5_Out.txt
+- ./client6 > client6_Out.txt
+- diff client5_Out.txt client5_GT.txt
+
+
+

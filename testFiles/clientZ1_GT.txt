@@ -1,0 +1,9 @@
+SendMessage: Sending message of type = 1 to Dst = Server
+MSG-RCVD: type = 2; src = Server; dst = clientZ1; length = 0 ; id = 0
+MSG-RCVD: type = 4; src = Server; dst = clientZ1; length = 18 ; id = 0
+Printing out the message payload 
+client33 clientZ1 
+Enter 1 to exit; Enter 2 to read; Enter 3 to send message to another user
+Enter client name:sending: Hello World 123
+SendMessage: Sending message of type = 5 to Dst = client33
+Client Exiting

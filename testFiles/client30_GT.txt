@@ -1,0 +1,29 @@
+
+HELLO ACK
+Message Header:
+  msgType: 2
+  msgSource: Server
+  msgDest: client30
+  contentLength: 0
+  msgID: 0
+
+
+CLIENT LIST
+Message Header:
+  msgType: 4
+  msgSource: Server
+  msgDest: client30
+  contentLength: 9
+  msgID: 0
+
+client30
+
+CHAT
+Message Header:
+  msgType: 5
+  msgSource: client29
+  msgDest: client30
+  contentLength: 36
+  msgID: 1
+
+Thank you for your message client30!

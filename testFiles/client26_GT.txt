@@ -1,0 +1,34 @@
+
+HELLO ACK
+Message Header:
+  msgType: 2
+  msgSource: Server
+  msgDest: client26
+  contentLength: 0
+  msgID: 0
+
+
+CLIENT LIST
+Message Header:
+  msgType: 4
+  msgSource: Server
+  msgDest: client26
+  contentLength: 18
+  msgID: 0
+
+client25
+client26
+
+CHAT
+Message Header:
+  msgType: 5
+  msgSource: client25
+  msgDest: client26
+  contentLength: 400
+  msgID: 1
+
+System Software are software that provide services that help other software to run. So it is a means to an end
+Some examples are: operating systems, distributed systems, middleware systems, virtualization systems, and cloud computing management systems
+Operating Systems:
+manages hardware resources
+provides abstraction to applications: applications don't have to deal with the disk hardware when rea

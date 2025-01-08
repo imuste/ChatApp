@@ -1,0 +1,42 @@
+
+HELLO ACK
+Message Header:
+  msgType: 2
+  msgSource: Server
+  msgDest: client70
+  contentLength: 0
+  msgID: 0
+
+
+CLIENT LIST
+Message Header:
+  msgType: 4
+  msgSource: Server
+  msgDest: client70
+  contentLength: 36
+  msgID: 0
+
+client69
+client72
+client71
+client70
+
+CHAT
+Message Header:
+  msgType: 5
+  msgSource: client72
+  msgDest: client70
+  contentLength: 58
+  msgID: 1
+
+Hello, how are you doing, this is a message from client 6.
+
+CHAT
+Message Header:
+  msgType: 5
+  msgSource: client72
+  msgDest: client70
+  contentLength: 36
+  msgID: 2
+
+I'm happy to hear you're doing well.

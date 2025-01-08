@@ -1,0 +1,30 @@
+
+HELLO ACK
+Message Header:
+  msgType: 2
+  msgSource: Server
+  msgDest: client32
+  contentLength: 0
+  msgID: 0
+
+
+CLIENT LIST
+Message Header:
+  msgType: 4
+  msgSource: Server
+  msgDest: client32
+  contentLength: 9
+  msgID: 0
+
+client32
+
+ERROR_CANNOT_DELIVER
+Message Header:
+  msgType: 8
+  msgSource: Server
+  msgDest: client32
+  contentLength: 0
+  msgID: 1
+
+
+client was successfully removed

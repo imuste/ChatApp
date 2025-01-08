@@ -1,0 +1,30 @@
+
+HELLO ACK
+Message Header:
+  msgType: 2
+  msgSource: Server
+  msgDest: client29
+  contentLength: 0
+  msgID: 0
+
+
+CLIENT LIST
+Message Header:
+  msgType: 4
+  msgSource: Server
+  msgDest: client29
+  contentLength: 18
+  msgID: 0
+
+client30
+client29
+
+CHAT
+Message Header:
+  msgType: 5
+  msgSource: client30
+  msgDest: client29
+  contentLength: 40
+  msgID: 4
+
+Hello client29 I'm trying to reach you!!

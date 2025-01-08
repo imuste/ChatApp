@@ -1,0 +1,2546 @@
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: client1
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+EXIT
+Message Header:
+  msgType: 6
+  msgSource: client1
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: client2
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: client3
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+CLIENT LIST REQ
+Message Header:
+  msgType: 3
+  msgSource: client3
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+EXIT
+Message Header:
+  msgType: 6
+  msgSource: client3
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: client4
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+EXIT
+Message Header:
+  msgType: 6
+  msgSource: client4
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: client5
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: client6
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+CHAT
+Message Header:
+  msgType: 5
+  msgSource: client6
+  msgDest: client5
+  contentLength: 58
+  msgID: 1
+
+Hello, how are you doing, this is a message from client 6.
+
+CHAT
+Message Header:
+  msgType: 5
+  msgSource: client5
+  msgDest: client6
+  contentLength: 19
+  msgID: 1
+
+I'm good thank you.
+
+CHAT
+Message Header:
+  msgType: 5
+  msgSource: client6
+  msgDest: client5
+  contentLength: 36
+  msgID: 2
+
+I'm happy to hear you're doing well.
+
+CHAT
+Message Header:
+  msgType: 5
+  msgSource: client5
+  msgDest: client6
+  contentLength: 8
+  msgID: 2
+
+Goodbye!
+
+EXIT
+Message Header:
+  msgType: 6
+  msgSource: client5
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+EXIT
+Message Header:
+  msgType: 6
+  msgSource: client6
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: client7
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+Curr time: 5029069
+removeTime: 65029069
+TIMEOUT 59999999
+
+CLIENT LIST REQ
+Message Header:
+  msgType: 3
+  msgSource: client7
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+EXIT
+Message Header:
+  msgType: 6
+  msgSource: client7
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+Curr time: 6034574
+removeTime: 66034573
+TIMEOUT 59999997
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: client8
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+Curr time: 7034916
+removeTime: 67034916
+TIMEOUT 59999999
+
+EXIT
+Message Header:
+  msgType: 6
+  msgSource: client8
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: client9
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: client10
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+Curr time: 9041833
+removeTime: 69041833
+TIMEOUT 59999999
+
+CHAT
+Message Header:
+  msgType: 5
+  msgSource: client10
+  msgDest: client9
+  contentLength: 58
+  msgID: 1
+
+Curr time: 10042031
+removeTime: 70042008
+TIMEOUT 59999976
+
+CHAT
+Message Header:
+  msgType: 5
+  msgSource: client10
+  msgDest: client9
+  contentLength: 58
+  msgID: 1
+
+Hello, how are you doing, this is a message from client10.
+Curr time: 12042330
+removeTime: 72042329
+TIMEOUT 59999996
+
+CHAT
+Message Header:
+  msgType: 5
+  msgSource: client9
+  msgDest: client10
+  contentLength: 19
+  msgID: 1
+
+Curr time: 13042474
+removeTime: 73042466
+TIMEOUT 59999992
+
+CHAT
+Message Header:
+  msgType: 5
+  msgSource: client9
+  msgDest: client10
+  contentLength: 19
+  msgID: 1
+
+I'm good thank you.
+Curr time: 15042766
+removeTime: 75042765
+TIMEOUT 59999997
+
+CHAT
+Message Header:
+  msgType: 5
+  msgSource: client10
+  msgDest: client9
+  contentLength: 36
+  msgID: 2
+
+Curr time: 16042894
+removeTime: 76042888
+TIMEOUT 59999993
+
+CHAT
+Message Header:
+  msgType: 5
+  msgSource: client10
+  msgDest: client9
+  contentLength: 36
+  msgID: 2
+
+I'm happy to hear you're doing well.
+Curr time: 18043589
+removeTime: 78043588
+TIMEOUT 59999996
+Curr time: 19043713
+removeTime: 79043711
+TIMEOUT 59999995
+
+CHAT
+Message Header:
+  msgType: 5
+  msgSource: client9
+  msgDest: client10
+  contentLength: 8
+  msgID: 2
+
+Goodbye!
+
+EXIT
+Message Header:
+  msgType: 6
+  msgSource: client9
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+EXIT
+Message Header:
+  msgType: 6
+  msgSource: client10
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: client12
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: client13
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+Curr time: 21060847
+removeTime: 81060847
+TIMEOUT 59999999
+Curr time: 22062343
+removeTime: 81060847
+TIMEOUT 58998501
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: client14
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+Curr time: 22062389
+removeTime: 81060847
+TIMEOUT 58998458
+
+CHAT
+Message Header:
+  msgType: 5
+  msgSource: client14
+  msgDest: client13
+  contentLength: 58
+  msgID: 1
+
+Hello, how are you doing, this is a message from client14.
+Curr time: 22062553
+removeTime: 81060847
+TIMEOUT 58998294
+
+EXIT
+Message Header:
+  msgType: 6
+  msgSource: client14
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+Curr time: 22062591
+removeTime: 81060847
+TIMEOUT 58998256
+
+CLIENT LIST REQ
+Message Header:
+  msgType: 3
+  msgSource: client13
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+EXIT
+Message Header:
+  msgType: 6
+  msgSource: client13
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: client15
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: Client15
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+EXIT
+Message Header:
+  msgType: 6
+  msgSource: Client15
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+EXIT
+Message Header:
+  msgType: 6
+  msgSource: client15
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+Curr time: 28078303
+removeTime: 88078302
+TIMEOUT 59999997
+Curr time: 29080009
+removeTime: 88078302
+TIMEOUT 58998290
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: client18
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+Curr time: 29080065
+removeTime: 88078302
+TIMEOUT 58998237
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: client17
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+EXIT
+Message Header:
+  msgType: 6
+  msgSource: client17
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+EXIT
+Message Header:
+  msgType: 6
+  msgSource: client18
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: client20
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: client19
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+CLIENT LIST REQ
+Message Header:
+  msgType: 3
+  msgSource: client19
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+CHAT
+Message Header:
+  msgType: 5
+  msgSource: client19
+  msgDest: client20
+  contentLength: 32
+  msgID: 1
+
+Hello this is message 1 for you!
+
+CHAT
+Message Header:
+  msgType: 5
+  msgSource: client19
+  msgDest: client20
+  contentLength: 13
+  msgID: 1
+
+And message 2
+
+EXIT
+Message Header:
+  msgType: 6
+  msgSource: client19
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+EXIT
+Message Header:
+  msgType: 6
+  msgSource: client20
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: client21
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: client22
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: client23
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: client24
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+CHAT
+Message Header:
+  msgType: 5
+  msgSource: client21
+  msgDest: client22
+  contentLength: 67
+  msgID: 1
+
+Hello client22, how are you doing, this is a message from client21.
+
+CHAT
+Message Header:
+  msgType: 5
+  msgSource: client21
+  msgDest: client23
+  contentLength: 62
+  msgID: 2
+
+Hello client23, this is a message from client21, how are you??
+
+CHAT
+Message Header:
+  msgType: 5
+  msgSource: client21
+  msgDest: client24
+  contentLength: 35
+  msgID: 3
+
+A message from client21 to client24
+
+CHAT
+Message Header:
+  msgType: 5
+  msgSource: client22
+  msgDest: client21
+  contentLength: 44
+  msgID: 1
+
+This is client22 messaging you back client21
+
+CHAT
+Message Header:
+  msgType: 5
+  msgSource: client22
+  msgDest: client24
+  contentLength: 34
+  msgID: 2
+
+This is client22 messaging clien24
+
+CHAT
+Message Header:
+  msgType: 5
+  msgSource: client24
+  msgDest: client22
+  contentLength: 41
+  msgID: 1
+
+Messaging back to client22 from client24
+
+CHAT
+Message Header:
+  msgType: 5
+  msgSource: client24
+  msgDest: client21
+  contentLength: 52
+  msgID: 2
+
+Thank you for your message client 21, from client24!
+
+EXIT
+Message Header:
+  msgType: 6
+  msgSource: client22
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+CHAT
+Message Header:
+  msgType: 5
+  msgSource: client23
+  msgDest: client24
+  contentLength: 41
+  msgID: 1
+
+A great message from client23 to client24
+
+CHAT
+Message Header:
+  msgType: 5
+  msgSource: client24
+  msgDest: client23
+  contentLength: 43
+  msgID: 3
+
+Nice to meet you client23, this is client24
+
+CHAT
+Message Header:
+  msgType: 5
+  msgSource: client23
+  msgDest: client21
+  contentLength: 41
+  msgID: 2
+
+This is client23 messaging back client 21
+
+EXIT
+Message Header:
+  msgType: 6
+  msgSource: client24
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+EXIT
+Message Header:
+  msgType: 6
+  msgSource: client23
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+EXIT
+Message Header:
+  msgType: 6
+  msgSource: client21
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: client25
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: client26
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+CHAT
+Message Header:
+  msgType: 5
+  msgSource: client25
+  msgDest: client26
+  contentLength: 400
+  msgID: 1
+
+System Software are software that provide services that help other software to run. So it is a means to an end
+Some examples are: operating systems, distributed systems, middleware systems, virtualization systems, and cloud computing management systems
+Operating Systems:
+manages hardware resources
+provides abstraction to applications: applications don't have to deal with the disk hardware when rea
+
+CHAT
+Message Header:
+  msgType: 5
+  msgSource: client26
+  msgDest: client25
+  contentLength: 44
+  msgID: 1
+
+Thank you for your super super long message!
+
+EXIT
+Message Header:
+  msgType: 6
+  msgSource: client26
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+EXIT
+Message Header:
+  msgType: 6
+  msgSource: client25
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: client27
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+CHAT
+Message Header:
+  msgType: 5
+  msgSource: client27
+  msgDest: clientX
+  contentLength: 42
+  msgID: 4
+
+Sending a message to a non-Existent client
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: client28
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+Curr time: 73125017
+removeTime: 133125016
+TIMEOUT 59999998
+TIMED OUT
+Curr time: 133175241
+removeTime: 133125016
+Removing client
+Curr time: 133181519
+removeTime: 193181519
+TIMEOUT 59999997
+Curr time: 134183336
+removeTime: 193181519
+TIMEOUT 58998179
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: client30
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+Curr time: 134183372
+removeTime: 193181519
+TIMEOUT 58998146
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: client29
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+CHAT
+Message Header:
+  msgType: 5
+  msgSource: client30
+  msgDest: client29
+  contentLength: 40
+  msgID: 4
+
+Hello client29 I'm trying to reach you!!
+
+CHAT
+Message Header:
+  msgType: 5
+  msgSource: client29
+  msgDest: client30
+  contentLength: 36
+  msgID: 1
+
+Thank you for your message client30!
+
+EXIT
+Message Header:
+  msgType: 6
+  msgSource: client29
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+EXIT
+Message Header:
+  msgType: 6
+  msgSource: client30
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: client31
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+EXIT
+Message Header:
+  msgType: 6
+  msgSource: client31
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: client32
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+CHAT
+Message Header:
+  msgType: 5
+  msgSource: client32
+  msgDest: client31
+  contentLength: 58
+  msgID: 1
+
+Hello, how are you doing, this is a message from client32.
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: client33
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: clientZ1
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+CHAT
+Message Header:
+  msgType: 5
+  msgSource: clientZ1
+  msgDest: client33
+  contentLength: 16
+  msgID: 1
+
+Hello World 123
+
+EXIT
+Message Header:
+  msgType: 6
+  msgSource: client33
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: clientZ2
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: client34
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+CHAT
+Message Header:
+  msgType: 5
+  msgSource: client34
+  msgDest: clientZ2
+  contentLength: 58
+  msgID: 1
+
+Hello, how are you doing, this is a message from client34.
+
+EXIT
+Message Header:
+  msgType: 6
+  msgSource: client34
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: client35
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: client36
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+Curr time: 157223155
+removeTime: 217223155
+TIMEOUT 59999999
+Curr time: 158221876
+removeTime: 218221874
+Curr time: 158221876
+removeTime: 217223155
+TIMEOUT 59001276
+
+CLIENT LIST REQ
+Message Header:
+  msgType: 3
+  msgSource: client36
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+Curr time: 172223316
+removeTime: 218221874
+TIMEOUT 45998557
+Curr time: 172223336
+removeTime: 218221874
+Curr time: 172223336
+removeTime: 232223336
+TIMEOUT 45998537
+
+CHAT
+Message Header:
+  msgType: 5
+  msgSource: client35
+  msgDest: client36
+  contentLength: 58
+  msgID: 8
+
+Curr time: 217222029
+removeTime: 277222023
+Curr time: 217222029
+removeTime: 232223336
+TIMEOUT 15001305
+TIMED OUT
+Curr time: 232238370
+removeTime: 277222023
+Curr time: 232238370
+removeTime: 232223336
+Removing client
+TIMEOUT 44983585
+
+CHAT
+Message Header:
+  msgType: 5
+  msgSource: client35
+  msgDest: client36
+  contentLength: 58
+  msgID: 8
+
+Hello, how are you doing, this is a message from client35.
+Curr time: 238229760
+removeTime: 298229759
+TIMEOUT 59999997
+TIMED OUT
+Curr time: 298286429
+removeTime: 298229759
+Removing client
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: client38
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: client39
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+EXIT
+Message Header:
+  msgType: 6
+  msgSource: client38
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: client40
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+CHAT
+Message Header:
+  msgType: 5
+  msgSource: client40
+  msgDest: client40
+  contentLength: 11
+  msgID: 1
+
+Hello there
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: client38
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+EXIT
+Message Header:
+  msgType: 6
+  msgSource: client38
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: client38
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: client42
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+EXIT
+Message Header:
+  msgType: 6
+  msgSource: client38
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: client38
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: client43
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+EXIT
+Message Header:
+  msgType: 6
+  msgSource: client38
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: client38
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: client44
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+EXIT
+Message Header:
+  msgType: 6
+  msgSource: client38
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: client46
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: client45
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+CLIENT LIST REQ
+Message Header:
+  msgType: 3
+  msgSource: client45
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+CHAT
+Message Header:
+  msgType: 5
+  msgSource: client45
+  msgDest: client46
+  contentLength: 46
+  msgID: 1
+
+Hello this is message 1 for you from client45!
+
+CHAT
+Message Header:
+  msgType: 5
+  msgSource: client45
+  msgDest: client47
+  contentLength: 13
+  msgID: 2
+
+And message 2
+
+EXIT
+Message Header:
+  msgType: 6
+  msgSource: client46
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: client47
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: client38
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: client48
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+EXIT
+Message Header:
+  msgType: 6
+  msgSource: client38
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: client38
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: client49
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+CHAT
+Message Header:
+  msgType: 5
+  msgSource: client49
+  msgDest: client38
+  contentLength: 1
+  msgID: 1
+
+H
+
+EXIT
+Message Header:
+  msgType: 6
+  msgSource: client38
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: client50
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: client51
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+CHAT
+Message Header:
+  msgType: 5
+  msgSource: client51
+  msgDest: client50
+  contentLength: 1
+  msgID: 1
+
+I
+
+CHAT
+Message Header:
+  msgType: 5
+  msgSource: client50
+  msgDest: client51
+  contentLength: 19
+  msgID: 1
+
+I'm good thank you.
+
+CHAT
+Message Header:
+  msgType: 5
+  msgSource: client51
+  msgDest: client50
+  contentLength: 36
+  msgID: 2
+
+I'm happy to hear you're doing well.
+
+EXIT
+Message Header:
+  msgType: 6
+  msgSource: client51
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: clientC1
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: clientC1
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: clientH2
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: clientH2
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: clientE1
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: clientE1
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: client38
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: clientC2
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+EXIT
+Message Header:
+  msgType: 6
+  msgSource: client38
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: client38
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: clientC2
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+EXIT
+Message Header:
+  msgType: 6
+  msgSource: client38
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: client38
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: clientC2
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+EXIT
+Message Header:
+  msgType: 6
+  msgSource: client38
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: client69
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+Curr time: 655534838
+removeTime: 715534837
+TIMEOUT 59999996
+Curr time: 656536368
+removeTime: 715534837
+TIMEOUT 58998465
+Curr time: 656536380
+removeTime: 715534837
+Curr time: 656536380
+removeTime: 716536379
+TIMEOUT 58998456
+Curr time: 657537874
+removeTime: 715534837
+Curr time: 657537874
+removeTime: 716536379
+TIMEOUT 57996958
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: client72
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+Curr time: 657537930
+removeTime: 715534837
+Curr time: 657537930
+removeTime: 716536379
+TIMEOUT 57996906
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: client71
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+Curr time: 658536594
+removeTime: 715534837
+TIMEOUT 56998242
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: client70
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+CHAT
+Message Header:
+  msgType: 5
+  msgSource: client72
+  msgDest: client70
+  contentLength: 58
+  msgID: 1
+
+Hello, how are you doing, this is a message from client 6.
+
+EXIT
+Message Header:
+  msgType: 6
+  msgSource: client69
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+CHAT
+Message Header:
+  msgType: 5
+  msgSource: client70
+  msgDest: client72
+  contentLength: 19
+  msgID: 1
+
+I'm good thank you.
+
+EXIT
+Message Header:
+  msgType: 6
+  msgSource: client71
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+CHAT
+Message Header:
+  msgType: 5
+  msgSource: client72
+  msgDest: client70
+  contentLength: 36
+  msgID: 2
+
+I'm happy to hear you're doing well.
+
+CHAT
+Message Header:
+  msgType: 5
+  msgSource: client70
+  msgDest: client72
+  contentLength: 8
+  msgID: 2
+
+Goodbye!
+
+EXIT
+Message Header:
+  msgType: 6
+  msgSource: client70
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+EXIT
+Message Header:
+  msgType: 6
+  msgSource: client72
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: client13
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: client14
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: client15
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: client16
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: client17
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: client18
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: client19
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: client20
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: client21
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: client22
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: client23
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: client24
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: client25
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: client26
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: client27
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: client28
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: client29
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: client30
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: client31
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: client32
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: client33
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: client34
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: client35
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: client36
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: client37
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: client38
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: client39
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: client40
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: client41
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: client42
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: client43
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: client44
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: client45
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: client46
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: client47
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: client48
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: client49
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: client50
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: client51
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: client52
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: client53
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: client54
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: client55
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: client56
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+EXIT
+Message Header:
+  msgType: 6
+  msgSource: client13
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+EXIT
+Message Header:
+  msgType: 6
+  msgSource: client14
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+EXIT
+Message Header:
+  msgType: 6
+  msgSource: client15
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+EXIT
+Message Header:
+  msgType: 6
+  msgSource: client16
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+EXIT
+Message Header:
+  msgType: 6
+  msgSource: client17
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+EXIT
+Message Header:
+  msgType: 6
+  msgSource: client18
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+EXIT
+Message Header:
+  msgType: 6
+  msgSource: client19
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+EXIT
+Message Header:
+  msgType: 6
+  msgSource: client20
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+EXIT
+Message Header:
+  msgType: 6
+  msgSource: client21
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+EXIT
+Message Header:
+  msgType: 6
+  msgSource: client22
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+EXIT
+Message Header:
+  msgType: 6
+  msgSource: client23
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+EXIT
+Message Header:
+  msgType: 6
+  msgSource: client24
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+EXIT
+Message Header:
+  msgType: 6
+  msgSource: client25
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+EXIT
+Message Header:
+  msgType: 6
+  msgSource: client26
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+EXIT
+Message Header:
+  msgType: 6
+  msgSource: client27
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+EXIT
+Message Header:
+  msgType: 6
+  msgSource: client28
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+EXIT
+Message Header:
+  msgType: 6
+  msgSource: client29
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+EXIT
+Message Header:
+  msgType: 6
+  msgSource: client30
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+EXIT
+Message Header:
+  msgType: 6
+  msgSource: client31
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+EXIT
+Message Header:
+  msgType: 6
+  msgSource: client32
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+EXIT
+Message Header:
+  msgType: 6
+  msgSource: client33
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+EXIT
+Message Header:
+  msgType: 6
+  msgSource: client34
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+EXIT
+Message Header:
+  msgType: 6
+  msgSource: client35
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+EXIT
+Message Header:
+  msgType: 6
+  msgSource: client36
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+EXIT
+Message Header:
+  msgType: 6
+  msgSource: client37
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+EXIT
+Message Header:
+  msgType: 6
+  msgSource: client38
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+EXIT
+Message Header:
+  msgType: 6
+  msgSource: client39
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+EXIT
+Message Header:
+  msgType: 6
+  msgSource: client40
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+EXIT
+Message Header:
+  msgType: 6
+  msgSource: client41
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+EXIT
+Message Header:
+  msgType: 6
+  msgSource: client42
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+EXIT
+Message Header:
+  msgType: 6
+  msgSource: client43
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+EXIT
+Message Header:
+  msgType: 6
+  msgSource: client44
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+EXIT
+Message Header:
+  msgType: 6
+  msgSource: client45
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+EXIT
+Message Header:
+  msgType: 6
+  msgSource: client46
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+EXIT
+Message Header:
+  msgType: 6
+  msgSource: client47
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+EXIT
+Message Header:
+  msgType: 6
+  msgSource: client48
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+EXIT
+Message Header:
+  msgType: 6
+  msgSource: client49
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+EXIT
+Message Header:
+  msgType: 6
+  msgSource: client50
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+EXIT
+Message Header:
+  msgType: 6
+  msgSource: client51
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+EXIT
+Message Header:
+  msgType: 6
+  msgSource: client52
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+EXIT
+Message Header:
+  msgType: 6
+  msgSource: client53
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+EXIT
+Message Header:
+  msgType: 6
+  msgSource: client54
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+EXIT
+Message Header:
+  msgType: 6
+  msgSource: client55
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+EXIT
+Message Header:
+  msgType: 6
+  msgSource: client56
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+Curr time: 670558658
+removeTime: 730558657
+TIMEOUT 59999997
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: client74
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+Curr time: 672558965
+removeTime: 732558964
+TIMEOUT 59999998
+
+EXIT
+Message Header:
+  msgType: 6
+  msgSource: client74
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: client75
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+
+HELLO
+Message Header:
+  msgType: 1
+  msgSource: client76
+  msgDest: Server
+  contentLength: 0
+  msgID: 0
+
+Curr time: 674565844
+removeTime: 734565844
+TIMEOUT 59999999
+
+CHAT
+Message Header:
+  msgType: 5
+  msgSource: client76
+  msgDest: client75
+  contentLength: 58
+  msgID: 1
+
+Curr time: 675566008
+removeTime: 735566001
+TIMEOUT 59999992
+
+CHAT
+Message Header:
+  msgType: 5
+  msgSource: client76
+  msgDest: client75
+  contentLength: 58
+  msgID: 1
+
+Hello, how are you doing, this is a message from client76.
+Curr time: 677566384
+removeTime: 737566383
+TIMEOUT 59999995
+
+CHAT
+Message Header:
+  msgTyp

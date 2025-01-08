@@ -1,0 +1,10 @@
+
+ERROR_CLIENT_ALREADY_PRESENT
+Message Header:
+  msgType: 7
+  msgSource: Server
+  msgDest: client38
+  contentLength: 0
+  msgID: 0
+
+client was successfully removed

@@ -1,0 +1,52 @@
+
+HELLO ACK
+Message Header:
+  msgType: 2
+  msgSource: Server
+  msgDest: client24
+  contentLength: 0
+  msgID: 0
+
+
+CLIENT LIST
+Message Header:
+  msgType: 4
+  msgSource: Server
+  msgDest: client24
+  contentLength: 36
+  msgID: 0
+
+client21
+client22
+client23
+client24
+
+CHAT
+Message Header:
+  msgType: 5
+  msgSource: client21
+  msgDest: client24
+  contentLength: 35
+  msgID: 3
+
+A message from client21 to client24
+
+CHAT
+Message Header:
+  msgType: 5
+  msgSource: client22
+  msgDest: client24
+  contentLength: 34
+  msgID: 2
+
+This is client22 messaging clien24
+
+CHAT
+Message Header:
+  msgType: 5
+  msgSource: client23
+  msgDest: client24
+  contentLength: 41
+  msgID: 1
+
+A great message from client23 to client24

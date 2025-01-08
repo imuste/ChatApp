@@ -1,0 +1,30 @@
+
+HELLO ACK
+Message Header:
+  msgType: 2
+  msgSource: Server
+  msgDest: client42
+  contentLength: 0
+  msgID: 0
+
+
+CLIENT LIST
+Message Header:
+  msgType: 4
+  msgSource: Server
+  msgDest: client42
+  contentLength: 18
+  msgID: 0
+
+client38
+client42
+
+ERROR_CLIENT_ALREADY_PRESENT
+Message Header:
+  msgType: 7
+  msgSource: Server
+  msgDest: client38
+  contentLength: 0
+  msgID: 0
+
+client was successfully removed
